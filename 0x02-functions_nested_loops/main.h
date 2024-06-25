@@ -1,6 +1,7 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+void jack_bauer(void);
 int _abs(int);
 int print_sign(int n);
 int _putchar(char c);
