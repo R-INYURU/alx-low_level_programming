@@ -12,7 +12,7 @@ void prints(int numb)
 	int tns;
 	int hndrd;
 
-	if(numb< 0)
+	if (numb < 0)
 	{
 		numb *= (-1);
 		_putchar('-');
@@ -30,7 +30,7 @@ void prints(int numb)
 	else if (numb > 99 && numb < 1000)
 	{
 		hndrd = numb / 100;
-		tns = (numb / 10) / 10;
+		tns = (numb - (hndrd * 100)) / 10;
 		rmndr = numb % 10;
 		_putchar(hndrd + 48);
 		_putchar(tns + 48);
