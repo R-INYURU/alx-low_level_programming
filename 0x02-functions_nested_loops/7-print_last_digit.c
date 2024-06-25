@@ -8,9 +8,20 @@
  */
 int print_last_digit(int n)
 {
-	if (n < 0)
-		n *= (-1);
-	_putchar ((n % 10) + 48);
+	int neg = 0;
+	int dig = 0;
 
-	return (n % 10);
+	if (n < 0)
+	{
+		n += 1;
+		n *= (-1);
+		neg = 1;
+	}
+	dig = n % 10;
+
+	if (neg == 1)
+		dig += 1;
+	_putchar(dig + 48);
+
+	return (dig);
 }
