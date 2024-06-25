@@ -54,6 +54,8 @@ void print_times_table(int n)
 
 	for (mlple = 0; mlple <= n; mlple++)
 	{
+		if (n > 31)
+			break;
 		for (mltlr = 0; mltlr <= n; mltlr++)
 		{
 			prod = mlple * mltlr;
