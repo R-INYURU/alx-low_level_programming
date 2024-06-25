@@ -1,6 +1,7 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+void print_to_98(int n);
 int add(int, int);
 void times_table(void);
 int print_last_digit(int);
