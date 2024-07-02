@@ -1,2 +1,0 @@
-#!/bin/bash
-gcc -Wall -Werror -pedantic -Wextra -std=gnu89 main.h  $1 $2
