@@ -14,7 +14,7 @@ void print_rev(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		++count;
 
-	for (i = 0; count != -1; i++)
+	for (i = 0; count != 0; i++)
 	{
 		_putchar(str[count]);
 		--count;
