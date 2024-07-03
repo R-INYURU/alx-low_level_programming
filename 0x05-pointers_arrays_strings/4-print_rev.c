@@ -13,7 +13,6 @@ void print_rev(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		count++;
-	count++;
 
 	for (i = (count - 1); i >= 0; i--)
 		_putchar(str[i]);
