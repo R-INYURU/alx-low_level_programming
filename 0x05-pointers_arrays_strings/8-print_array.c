@@ -152,6 +152,8 @@ void print_array(int *a, int n)
 
 	if (n < 0)
 		_putchar('\n');
+	else if (n == 0)
+		_putchar('\n');
 	else
 	{
 		for (i = 0; i < n; i++)
@@ -165,8 +167,8 @@ void print_array(int *a, int n)
 			else
 			{
 				prints(a[i]);
+				_putchar('\n');
 			}
 		}
 	}
-	_putchar('\n');
 }
