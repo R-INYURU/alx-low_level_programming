@@ -10,7 +10,24 @@ void print_m(int numb)
 {
 	int rmndr, tns, hndrd, thsnd, tnthsnd, hndthsnd, mills;
 
-	if (numb > 999999 && numb < 10000000)
+	if (numb > 99999 && numb < 1000000)
+	{
+		hndthsnd = numb / 100000;
+		tnthsnd = (numb - (hndthsnd * 100000)) / 10000;
+		thsnd = (numb - ((hndthsnd * 100000) + (tnthsnd * 10000))) / 1000;
+		hndrd = (numb - ((hndthsnd * 100000) + (tnthsnd * 10000) +
+						 (thsnd * 1000))) / 100;
+		tns = (numb - ((hndthsnd * 100000) + (tnthsnd * 10000) +
+					   (thsnd * 1000) + (hndrd * 100))) / 10;
+		rmndr = numb % 10;
+		_putchar(hndthsnd + 48);
+		_putchar(tnthsnd + 48);
+		_putchar(thsnd + 48);
+		_putchar(hndrd + 48);
+		_putchar(tns + 48);
+		_putchar(rmndr + 48);
+	}
+	else if (numb > 999999 && numb < 10000000)
 	{
 		mills = numb / 1000000;
 		hndthsnd = (numb - (mills * 1000000)) / 100000;
@@ -40,7 +57,7 @@ void print_m(int numb)
  */
 void print_mill(int numb)
 {
-	int rmndr, tns, hndrd, thsnd, tnthsnd, hndthsnd;
+	int rmndr, tns, hndrd, thsnd, tnthsnd;
 
 	if (numb > 9999 && numb < 10000)
 	{
@@ -55,24 +72,21 @@ void print_mill(int numb)
 		_putchar(tns + 48);
 		_putchar(rmndr + 48);
 	}
-	else if (numb > 99999 && numb < 1000000)
+	else if (numb > 9999 && numb < 100000)
 	{
-		hndthsnd = numb / 100000;
-		tnthsnd = (numb - (hndthsnd * 100000)) / 10000;
-		thsnd = (numb - ((hndthsnd * 100000) + (tnthsnd * 10000))) / 1000;
-		hndrd = (numb - ((hndthsnd * 100000) + (tnthsnd * 10000) +
-						 (thsnd * 1000))) / 100;
-		tns = (numb - ((hndthsnd * 100000) + (tnthsnd * 10000) +
-					   (thsnd * 1000) + (hndrd * 100))) / 10;
+		tnthsnd = numb / 10000;
+		thsnd = (numb - (tnthsnd * 10000)) / 1000;
+		hndrd = (numb - ((tnthsnd * 10000) + (thsnd * 1000))) / 100;
+		tns = (numb - ((tnthsnd * 10000) + (thsnd * 1000) +
+					   (hndrd * 100))) / 10;
 		rmndr = numb % 10;
-		_putchar(hndthsnd + 48);
 		_putchar(tnthsnd + 48);
 		_putchar(thsnd + 48);
 		_putchar(hndrd + 48);
 		_putchar(tns + 48);
 		_putchar(rmndr + 48);
 	}
-	else if (numb > 999999 && numb < 10000000)
+	else if (numb > 99999 && numb < 10000000)
 		print_m(numb);
 }
 
@@ -151,8 +165,8 @@ void print_array(int *a, int n)
 			else
 			{
 				prints(a[i]);
-				_putchar('\n');
 			}
 		}
 	}
+	_putchar('\n');
 }

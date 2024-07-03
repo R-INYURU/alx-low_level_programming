@@ -15,7 +15,7 @@ int main(void)
 	array[3] = 298;
 	array[4] = -1024;
 	array[5] = 2984535;
-	array[6] = 3554257;
+	array[6] = 54257;
 	print_array(array, 7);
 	return (0);
 }
