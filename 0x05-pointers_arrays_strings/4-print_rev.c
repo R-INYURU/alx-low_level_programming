@@ -12,12 +12,10 @@ void print_rev(char *str)
 	int count = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
-		++count;
+		count++;
+	count++;
 
-	for (i = 0; count >= 0; i++)
-	{
-		_putchar(str[count]);
-		count--;
-	}
+	for (i = (count - 1); i >= 0; i--)
+		_putchar(str[i]);
 	_putchar('\n');
 }
