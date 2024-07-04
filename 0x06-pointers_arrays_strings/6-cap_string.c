@@ -14,6 +14,8 @@ char *cap_string(char *str)
 	{
 		if (str[i] > 0 && str[i] < 47)
 		{
+			if (str[i] == 9)
+				str[i] = ' ';
 			if (str[j] > 96 && str[j] < 123)
 				str[j] -= 32;
 		}
