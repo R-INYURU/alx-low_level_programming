@@ -13,7 +13,7 @@ char *string_toupper(char *str)
 	char *newstr = str;
 
 	for (i = 0; str[i] != '\0'; i++)
-		count ++;
+		count++;
 
 	for (i = 0; i < count; i++)
 	{
