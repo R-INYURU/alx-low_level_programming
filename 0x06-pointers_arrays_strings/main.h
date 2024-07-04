@@ -1,6 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
+char *leet(char *);
 char *cap_string(char *);
 char *string_toupper(char *);
 void reverse_array(int *a, int n);
