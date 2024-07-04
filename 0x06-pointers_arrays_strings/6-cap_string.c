@@ -12,7 +12,7 @@ char *cap_string(char *str)
 
 	for (i = 0, j = 1; str[i] != '\0'; i++, j++)
 	{
-		if (str[i] > 0 && str[i] < 47)
+		if ((str[i] > 0) && (str[i] < 47) && str[i] != 45)
 		{
 			if (str[i] == 9)
 				str[i] = ' ';
