@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - chekc code mn
- *
- * Return: always 0
- */
 int main(void)
 {
 	int n;
