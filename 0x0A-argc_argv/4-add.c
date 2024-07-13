@@ -12,8 +12,8 @@ int main(int argc, char **argv)
 {
 	int i, addit = 0;
 
-	if (argc < 1)
-		printf("0\n");
+	if (argc == 1)
+		addit = 0;
 	for (i = 1; i < argc; i++)
 	{
 		if (atoi(argv[i]) == 0)
