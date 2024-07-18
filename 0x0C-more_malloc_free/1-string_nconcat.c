@@ -1,6 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * string_nconcat - concatenate two strings with specific no of bytes
+ * @s1: 1st string
+ * @s2: 2nd string
+ * @n: number of byte to concatenate
+ *
+ * Return: pointer to new string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, l, cnt = 0;
