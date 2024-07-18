@@ -11,9 +11,9 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
-	ptr = malloc(sizeof(b) * b);
+	ptr = malloc(b);
 	if (ptr == NULL)
-		return ((int *)98);
+		return (NULL);
 
 	return (ptr);
 }
