@@ -9,12 +9,8 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d->name == NULL &&
-		d->age == 0 &&
-		d->owner == NULL)
-	{
+	if (d == NULL)
 		return;
-	}
 	else if (d->name == NULL &&
 		d->age != 0 &&
 		d->owner != NULL)
