@@ -16,9 +16,12 @@ int main(void)
 	my_dog.age = 3.5;
 	my_dog.owner = "Bob";
 	print_dog(&my_dog);
+	printf("\n");
 	this_dog.age = 7.6;
 	this_dog.owner = "Thomas";
 	print_dog(&this_dog);
+	printf("\n");
 	print_dog(&that_dog);
+	printf("\n");
 	return (0);
 }
