@@ -19,7 +19,7 @@ int _atoi(const char *str)
 }
 
 /**
- * binay_to_uint - converts a binary number to an unsigned int
+ * binary_to_uint - converts a binary number to an unsigned int
  * @b: string variable storing binary number
  *
  * Return: converted number, or 0
