@@ -9,16 +9,11 @@
 int _atoi(char *str)
 {
 	int i;
-	int count = 0;
 	int val = 1;
 
-	for (i = 0; str[i] != '\0'; i++)
-		count++;
-
-	for (i = 0; i < count; i++)
+	for (i = 0; str[i] != ''; i++)
 	{
-		if (str[i] == 45)
-			val *= -1;
-		
+		val = val * 10 + str[i] - '0';
 	}
+	return (val);
 }
