@@ -11,6 +11,8 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
+	if (!s)
+		return (NULL);
 	for (i = 0; s[i] != c; i++)
 		;
 
