@@ -10,6 +10,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, i = 0;
+	ssize_t wrt;
 	size_t count = 0;
 
 	if (!filename)
@@ -23,7 +24,12 @@ int create_file(const char *filename, char *text_content)
 		count++;
 		i++;
 	}
-	write(fd, text_content, count);
+	wrt = write(fd, text_content, count);
+	if (wrt == -1)
+	{
+		close(fd);
+		return (-1);
+	}
 
 	close(fd);
 
