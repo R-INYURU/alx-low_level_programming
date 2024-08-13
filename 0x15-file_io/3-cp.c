@@ -15,7 +15,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: vp file_from file_to\n");
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd1 = open(av[1], O_RDONLY);
@@ -24,7 +24,7 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	fd2 = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0624);
 	if (fd2 == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
@@ -38,9 +38,14 @@ int main(int ac, char **av)
 
 	fd_close1 = close(fd1);
 	fd_close2 = close(fd2);
-	if (fd_close1 == -1 || fd_close2 == -1)
+	if (fd_close1 == -1)
 	{
 		dprintf(2, "Error: Can't close %d\n", fd_close1);
+		exit(100);
+	}
+	if (fd_close2 == -1)
+	{
+		dprintf(2, "Error: Can't close %d\n", fd_close2);
 		exit(100);
 	}
 	free(buff);
