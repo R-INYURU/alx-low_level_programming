@@ -30,7 +30,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		cp_node = cp_node->next;
 		idx_node++;
 	}
-	ins_node = add_dnodeint_end(**cp_node, n);
+	ins_node->n = n;
+	ins_node->next = cp_node->next;
+	ins_node->prev = cp_node;
+	if (cp_node->next == NULL)
+		cp_node->next->prev = ins_node;
+	cp_node->next = ins_node;
 
 	return (ins_node);
 }
