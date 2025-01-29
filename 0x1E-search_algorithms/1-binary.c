@@ -1,4 +1,4 @@
-#include "algos.h"
+#include "search_algos.h"
 
 /**
  * recursive_search - searches for a value in an array of integers
@@ -32,7 +32,7 @@ int recursive_search(int *array, size_t size, int value)
 
 	half++;
 
-	return (recursise_search(array + half, size - half, value) + half);
+	return (recursive_search(array + half, size - half, value) + half);
 }
 
 /**
